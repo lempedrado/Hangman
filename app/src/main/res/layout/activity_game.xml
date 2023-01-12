@@ -1,0 +1,78 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="162dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        app:src = "@drawable/hangman0"
+        android:contentDescription= "@string/initial" />
+
+    <TextView
+        android:id="@+id/gameLostTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/loss"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/gameWonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/win"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/wordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.3"
+        android:textSize="26sp"
+        android:layout_marginBottom="5dp"
+        tools:text="__ABCD______" />
+
+    <TextView
+        android:id="@+id/lettersUsedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        tools:text="Used Letters: A,B,C,D,E,F,G"/>
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:text="@string/new_game_button"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lettersLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        />
+
+
+</LinearLayout>
